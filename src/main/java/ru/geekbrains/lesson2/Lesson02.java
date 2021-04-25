@@ -1,36 +1,36 @@
 package ru.geekbrains.lesson2;
 
 public class Lesson02 {
-    int x1 = 20;
-    int x2 = 13;
-
-    public static boolean within10and20(int x1, int x2) {
-        int sum = x1 + x2;
-        if (sum > 10 && sum < 20) {
-            return true;
+    public static void main (String[] args) {
+        if (within10and20(3, 15)) {
+            System.out.println("true");
         } else {
-            return false;
+            System.out.println("false");
         }
-    }
-    public static void isPositiveOrNegative(int x1) {
-        if (x1 >= 0) {
-            System.out.println("positive");
+        isPositiveOrNegative(12);
+        if (isNegative(-3)) {
+            System.out.println("true");
         } else {
-            System.out.println("negative");
+            System.out.println("false");
         }
+        printWordNTimes("Hope",2);
     }
-    public static boolean isNegative(int x2) {
-        if (x2 > 0) {
-            return true;
+        public static boolean within10and20(int x1, int x2) {
+            return (x1+x2) > 10 && (x1+x2) < 20;
         }
-        return false;
-    }
-    public static void printWordNTimes(String word, int times) {
-        int times = 4;
-        String word = "Привет";
-
-        for ( int i = 0; i < times; ++i ) {
-            System.out.println(word);
+        public static void isPositiveOrNegative (int x) {
+            if (x >= 0) {
+                System.out.println("positive");
+            } else {
+                System.out.println("negative");
+            }
         }
-    }
+        public static boolean isNegative (int x2) {
+            return x2 > 0;
+        }
+        public static void printWordNTimes (String word, int times) {
+            for ( int i = 0; i < times; i++ ) {
+                System.out.println(word);
+            }
+        }
 }
